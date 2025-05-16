@@ -24,7 +24,7 @@ export default function Gallery() {
     setShowMore(!showMore);
   }
 
- 
+
 
   let sculpture = sculptureList[index];
   return (
@@ -32,7 +32,7 @@ export default function Gallery() {
       <button onClick={handlePrevClick}>
         Previous
       </button>
-     
+    
       <button onClick={handleNextClick}>
         Next
       </button>
@@ -40,15 +40,15 @@ export default function Gallery() {
         <i>{sculpture.name} </i> 
         by {sculpture.artist}
       </h2>
-      <h3>  
+      <h3>
         ({index + 1} of {sculptureList.length})
       </h3>
       <button onClick={handleMoreClick}>
         {showMore ? 'Hide' : 'Show'} details
       </button>
       {showMore && <p>{sculpture.description}</p>}
-      <img 
-        src={sculpture.url} 
+      <img
+        src={sculpture.url}
         alt={sculpture.alt}
       />
     </>
