@@ -1,77 +1,78 @@
-import React from "react";
-import { useState } from "react";
+import React from 'react';
+import { useState } from 'react';
 
-export default function() {
-  const [text, setText] = useState('')
-
-  function changeHandler (e) {
-    setText(e.target.value)
+function Input({ label, type = 'text' }) {
+  const [text, setText] = useState('');
+  function handleChange(e) {
+    setText(e.target.value);
   }
-  return(
-    <>
-    <h1>
-      Resume
-    </h1>
-    <section key="general">
-  <p> General</p>
-    <label>
-Name
-<input type="text" value={text} onChange={changeHandler}></input>
+  return (
+    <label style={{ display: 'block', margin: '.5rem 0' }}>
+      {label}
+      <input
+        type={type}
+        value={text}
+        onChange={handleChange}
+        style={{ marginLeft: '.5rem' }}
+      />
     </label>
-    <label>
-Email
-<input type="text" value={text} id="name"  onChange={changeHandler}></input>
-    </label>
-    <label>
-Phone number
-<input type="text" value={text} id="name"  onChange={changeHandler}></input>
-    </label>
+  );
+}
 
-    </section>
+export default function Resume() {
+  const generalFields = [
+    { label: 'Name' },
+    { label: 'Email', type: 'email' },
+    { label: 'Phone number', type: 'tel' },
+  ];
+  const educationFields = [
+    { label: 'School name' },
+    { label: 'Title of study' },
+    { label: 'Date of study', type: 'date' },
+  ];
+  const experienceFields = [
+    { label: 'Company name' },
+    { label: 'Position title' },
+    { label: 'Main responsibilities' },
+    { label: 'Date from', type: 'date' },
+    { label: 'Date to',   type: 'date' },
+  ];
 
-    <section key="education">
-  <p>Education</p>
-    <label>
-School name
-<input type="text" value={text} id="name"  onChange={changeHandler}></input>
-    </label>
-    <label>
-Title of study
-<input type="text" value={text} id="name"  onChange={changeHandler}></input>
-    </label>
-    <label>
-Date of study
-<input type="text" value={text} id="name"  onChange={changeHandler}></input>
-    </label>
+  return (
+  
+    <form onSubmit={submitted}>
+    <h1>Resume</h1>
 
-    </section>
+      <section>
+        <h2>General</h2>
+        {generalFields.map(f => (
+          <Input key={f.label} label={f.label} type={f.type} />
+        ))}
+      </section>
 
-    <section key="experience">
-  <p>Experience</p>
-    <label>
-Company name
-<input type="text" value={text} id="name"  onChange={changeHandler}></input>
-    </label>
-    <label>
-Position title
-<input type="text" value={text} id="name"  onChange={changeHandler}></input>
-    </label>
-    <label>
-Main responsibilities 
-<input type="text" value={text} id=""  onChange={changeHandler}></input>
-    </label>
+      <section>
+        <h2>Education</h2>
+        {educationFields.map(f => (
+          <Input key={f.label} label={f.label} type={f.type} />
+        ))}
+      </section>
 
-    <label>
-Date from: 
-<input type="number" value={text} id="date.from"  onChange={changeHandler}></input>
-    </label>
-
-<label>
-Date to: 
-<input type="number" value={text} id="date-to"  onChange={changeHandler}></input>
-    </label>
-    </section>
+      <section>
+        <h2>Experience</h2>
+        {experienceFields.map(f => (
+          <Input key={f.label} label={f.label} type={f.type} />
+        ))}
+      </section>
+      <button type='submit'>
+        Submit
+      </button>
+      </form>
+      
     
-    </>
-  )
+  );
+}
+
+
+function submitted (){
+  <h1> Thanks</h1>
 }
