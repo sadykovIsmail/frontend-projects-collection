@@ -1,0 +1,8 @@
+/* GeneralInfo.css, Education.css, Experience.css */
+/* (you can scope styles per section, for example) */
+section.general-info, section.education, section.experience {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border-radius: 4px;
+}

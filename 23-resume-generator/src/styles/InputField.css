@@ -1,0 +1,10 @@
+/* InputField.css */
+.input-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.75rem;
+}
+.input-field input {
+  padding: 0.5rem;
+  font-size: 1rem;
+}
