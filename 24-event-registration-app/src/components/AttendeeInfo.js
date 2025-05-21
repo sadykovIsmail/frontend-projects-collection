@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import SectionControls from './SectionControls'
 import InputFields from './InputFields'
-import AttendeeInfo from '.../styles/AttendeeInfo'
+import '../styles/AttendeeInfo'
 
 export default function AttendeeInfo ({onSubmit, data}){
 const[isEditing, setIsEditing] = useState(true)
@@ -15,7 +15,7 @@ function handleChange () {
     }, [data])
 }
 function handleChange (e) { 
-const [name, value] = e.target
+const {name, value} = e.target
 setForm(prev => ({...prev, [name]: value}))
 }
 
