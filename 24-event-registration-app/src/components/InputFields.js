@@ -1,7 +1,7 @@
 import React from "react";
 import '.../styles/InputFields.css'
 
-export default function InputField ({
+export default function InputFields ({
 label, name, type = 'text', value, onChange
 }){
     return (
