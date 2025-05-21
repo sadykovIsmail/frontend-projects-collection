@@ -1,0 +1,6 @@
+section.info, section.chooseTicket, section.additional {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border-radius: 4px;
+}

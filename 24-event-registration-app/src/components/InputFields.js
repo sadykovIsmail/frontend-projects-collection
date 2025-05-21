@@ -1,5 +1,5 @@
 import React from "react";
-import '.../styles/InputFields.css'
+import '../styles/InputFields.css'
 
 export default function InputFields ({
 label, name, type = 'text', value, onChange, options
@@ -26,7 +26,7 @@ label, name, type = 'text', value, onChange, options
   }
 
     return (
-        <label className="inputFIld">
+        <label className="inputField">
 <span className="label-text">
 {label}
 </span>

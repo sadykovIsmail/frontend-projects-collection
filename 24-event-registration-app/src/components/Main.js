@@ -9,7 +9,7 @@ export default function Main () {
     const[ticketsData, setTicketsData] = useState(null)
     const[additionalData, setAdditionalData] = useState(null)
     return(
-        <div className="Main">
+        <div className="main">
             <h1>Event Registration</h1>
 <AttendeeInfo data={attendData} onSubmit={setAttendData}/>
 <ChooseTickets data={ticketsData} onSubmit={setTicketsData}/>

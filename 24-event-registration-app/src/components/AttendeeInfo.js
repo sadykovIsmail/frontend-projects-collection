@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import SectionControls from './SectionControls'
 import InputFields from './InputFields'
-import '../styles/AttendeeInfo'
+import '../styles/AttendeeInfo.css'
 
 export default function AttendeeInfo ({onSubmit, data}){
 const[isEditing, setIsEditing] = useState(true)
@@ -9,12 +9,12 @@ const[form, setForm] = useState({
     name: "", email: "", phone: ""
 })
 
-function handleChange () { 
+
     useEffect(()=> {
         if(data) setForm(data)
     }, [data])
-}
-function handleChange (e) { 
+
+function handleChange (e) {
 const {name, value} = e.target
 setForm(prev => ({...prev, [name]: value}))
 }
@@ -30,8 +30,8 @@ function handleEdit () {
 
 return(
     <section className="info">
-        <h2>Attendee Info</h2>
-{isEditing ?
+    <h2>Attendee Info</h2>
+{isEditing ? (
 <>
 <InputFields 
     label= 'Name' name='name' value={form.name} onChange={handleChange}
@@ -44,14 +44,14 @@ label='Phone number' name='phone' value={form.phone} onChange={handleChange}
 />
 
 </>
-:
+) : (
 <>
 <p><strong>Name:</strong>{form.name}</p>
 <p><strong>Email:</strong>{form.email}</p>
 <p> <strong>Phone number:</strong>{form.phone}</p>
 
 </>
-}
+)}
 
 <SectionControls 
 isEditing={isEditing}
@@ -63,4 +63,4 @@ onSubmit={handleSubmit}
     
 )
 
-}
+};

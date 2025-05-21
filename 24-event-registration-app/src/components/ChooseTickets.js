@@ -30,21 +30,20 @@ function handleEdit() {
 return(
     <section className="chooseTicket">
 <h2>Choose ticket</h2>
-{isEditing ? 
-<>
+{isEditing ? (
+    <>
 <InputFields 
 label='Ticket type' name='type' onChange={handleChange} type="radio" options={[{value: "standard", label: 'Standard'}, {value: 'vip', label: 'Vip'}]} value={form.type}/>
 <InputFields label='Quantity' name='quantity' onChange={handleChange} type="number" value={form.quantity}/>
 <InputFields label='Add-Ons (optional)' name='addOns' onChange={handleChange} type="text" value={form.AddOns}/> 
 </>
-:
-<>
+) : (
+    <>
 <p><strong>Ticket type:</strong>{form.type}</p>
 <p><strong>Quantity:</strong>{form.quantity}</p>
-<p><strong>Add-Ons</strong>{form.AddOns}</p>
+<p><strong>Add-Ons:</strong>{form.AddOns}</p>
 </>
-
-}
+)}
 <SectionControls
 isEditing={isEditing}
 onEdit={handleEdit}
