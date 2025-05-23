@@ -21,7 +21,7 @@ async function fetchPlanets() {
         name: 'Venus'
       }, {
         id: 'mars',
-        name: 'Mars'        
+        name: 'Mars'
       }]);
     }, 1000);
   });
