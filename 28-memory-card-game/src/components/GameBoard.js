@@ -6,10 +6,9 @@ export default function GameBoard({ cards, onCardClick }) {
     <div className="board">
       {cards.map(card => (
         <Card
-          key={card.name}
-          id={card.name}
+          key={card.id}
+          id={card.id}
           image={card.image}
-          name={card.name}
           onClick={onCardClick}
         />
       ))}

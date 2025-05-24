@@ -1,24 +1,24 @@
-import { useState, useEffect } from 'react';
-
-export default function useFetchCards(apiUrl) {
+export default function useFetchCards() {
   const [cards, setCards] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    async function fetchData() {
+    async function fetchImages() {
       try {
-        const res = await fetch(apiUrl);
+        const res = await fetch('https://dog.ceo/api/breeds/image/random/12');
         const data = await res.json();
-        setCards(data.results || []);
+        // data.message is array of image URLs
+        const formatted = data.message.map((url, idx) => ({ id: idx, image: url }));
+        setCards(formatted);
       } catch (err) {
         setError(err);
       } finally {
         setLoading(false);
       }
     }
-    fetchData();
-  }, [apiUrl]);
+    fetchImages();
+  }, []);
 
   return { cards, loading, error };
 }
