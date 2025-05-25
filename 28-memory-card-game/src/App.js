@@ -13,7 +13,6 @@ function App() {
   const [score, setScore] = useState(0);
   const [best, setBest] = useState(() => Number(localStorage.getItem('best') || 0));
   const [modalOpen, setModalOpen] = useState(false);
-
   // initialize & reshuffle on fetch
   useEffect(() => {
     if (!loading && fetched.length) {
