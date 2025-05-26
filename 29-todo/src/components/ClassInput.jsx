@@ -55,7 +55,7 @@ class ClassInput extends Component {
           {this.state.todos.map((todo) => (
             <li key={todo}>
               {todo}
-              <button onClick={() => this.handleDelete(todo)}>❌</button>
+              <button onClick={() => this.handleDelete(todo)}>Delete</button>
             </li>
           ))}
         </ul>
