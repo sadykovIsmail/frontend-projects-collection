@@ -10,6 +10,8 @@ const FunctionalInput = ({ name }) => {
   const [todos, setTodos] = useState(['Just some demo tasks', 'As an example']);
   const [inputVal, setInputVal] = useState('');
   const [count, setCount] = useState(2);
+  const [editValue, setEditValue] = useState("")
+  const [editIndex, setEditIndex] = useState(null)
 
 
   const handleInputChange = (e) => {
@@ -28,6 +30,25 @@ const FunctionalInput = ({ name }) => {
     setTodos(todos.filter((todo) => todo !== deleteItem))
     setCount(count - 1)
   }
+
+  const handleEditStart = (index) => {
+setEditIndex(index)
+  }
+
+  const handleEditChange = (e) => {
+setEditValue(e.target.value)
+  }
+
+  const handleSave = () => {
+    const updated = [...todos]
+    updated[editIndex] = editValue
+    setTodos(updated)
+    setEditIndex(null)
+    setEditValue("")
+  }
+
+
+
 
   return (
     <section>
@@ -48,11 +69,26 @@ const FunctionalInput = ({ name }) => {
 
       {/* The list of all the To-Do's, displayed */}
       <ul>
-        {todos.map((todo) => (
+        {todos.map((todo, index) => (
           <li key={todo}>
-            {todo}
+            {editIndex === index ? (
+              <>
+              <input type="text"
+              onChange={handleEditChange}
+              value={editValue}/>
+              <button onClick={handleSave}>Save</button>
+              </>
+            ) : (
+<>
+{todo}
+          <button onClick={ () => handleEditStart(index)}>Edit</button>
+
           <button onClick={() => handleDelete(todo)}>Delete</button>
-          </li>
+          
+</>
+
+            )}
+            </li>
         ))}
       </ul>
     </section>
