@@ -12,6 +12,7 @@ class ClassInput extends Component {
 
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleDelete = this.handleDelete.bind(this);
   }
 
   handleInputChange(e) {
@@ -29,14 +30,17 @@ class ClassInput extends Component {
     }));
   }
 
+  handleDelete(itemToDelete) {
+    this.setState((state) => ({
+      todos: state.todos.filter((item) => item !== itemToDelete),
+    }));
+  }
+
   render() {
     return (
       <section>
-        {/* eslint-disable-next-line react/prop-types */}
         <h3>{this.props.name}</h3>
-        {/* The input field to enter To-Do's */}
         <form onSubmit={this.handleSubmit}>
-          {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
           <label htmlFor="task-entry">Enter a task: </label>
           <input
             type="text"
@@ -47,10 +51,12 @@ class ClassInput extends Component {
           <button type="submit">Submit</button>
         </form>
         <h4>All the tasks!</h4>
-        {/* The list of all the To-Do's, displayed */}
         <ul>
           {this.state.todos.map((todo) => (
-            <li key={todo}>{todo}</li>
+            <li key={todo}>
+              {todo}
+              <button onClick={() => this.handleDelete(todo)}>❌</button>
+            </li>
           ))}
         </ul>
       </section>
