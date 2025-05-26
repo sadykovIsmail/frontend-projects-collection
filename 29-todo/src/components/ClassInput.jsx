@@ -8,6 +8,7 @@ class ClassInput extends Component {
     this.state = {
       todos: ['Just some demo tasks', 'As an example'],
       inputVal: '',
+      count: 2,
     };
 
     this.handleInputChange = this.handleInputChange.bind(this);
@@ -27,14 +28,17 @@ class ClassInput extends Component {
     this.setState((state) => ({
       todos: state.todos.concat(state.inputVal),
       inputVal: '',
+      count: state.count + 1
     }));
   }
 
   handleDelete(itemToDelete) {
     this.setState((state) => ({
       todos: state.todos.filter((item) => item !== itemToDelete),
+      count: state.count - 1
     }));
   }
+
 
   render() {
     return (
@@ -50,7 +54,7 @@ class ClassInput extends Component {
           />
           <button type="submit">Submit</button>
         </form>
-        <h4>All the tasks!</h4>
+        <h4>All the tasks!  Tasks: {this.state.count}</h4>
         <ul>
           {this.state.todos.map((todo) => (
             <li key={todo}>
