@@ -16,3 +16,5 @@ const App = () => {
     </nav>
   </div>
 }
+
+export default App
