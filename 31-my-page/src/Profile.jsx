@@ -15,9 +15,9 @@ const Profile = () => {
                 <Biography />
             ) : name === "current" ? (
                 <Current />
-            ) : name === "plans" (
+            ) : name === "plans" ? (
                 <Plans />
-            )}
+            ) : <ErrorPage />}
         </div> 
     )
 }
