@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import Plans from "./Plans";
-import Current from "./current";
+import Current from "./Current2";
 import Biography from "./Biography";
 import ErrorPage from "./ErrorPage";
 
@@ -15,9 +15,9 @@ const Profile = () => {
                 <Biography />
             ) : name === "current" ? (
                 <Current />
-            ) : name === "plans" ? (
+            ) : name === "plans" (
                 <Plans />
-            ) : <ErrorPage />}
+            )}
         </div> 
     )
 }

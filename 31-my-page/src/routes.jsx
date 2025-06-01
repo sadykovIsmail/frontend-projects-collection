@@ -9,7 +9,7 @@ const routes = [
     errorElement: <ErrorPage />
 },
 {
-    path: "profile/name:",
+    path: "profile/:name",
     element: <Profile />
 }]
 
