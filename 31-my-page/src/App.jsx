@@ -8,7 +8,9 @@ const App = () => {
     <nav>
       <ul>
         <li>
-          <Link to="/"> </Link>
+          <Link to="profile/biography">My biography</Link>
+          <Link to="profile/current">What I am doing currently</Link>
+          <Link to="profile/plams">My future plans</Link>
         </li>
       </ul>
     </nav>
