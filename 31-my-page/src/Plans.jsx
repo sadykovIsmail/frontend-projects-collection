@@ -14,4 +14,4 @@ const Plans = () => {
 
 }
 
-export default Plans
+export default Plans 
