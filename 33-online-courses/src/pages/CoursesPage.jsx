@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export default function CoursesPage() {
+export default function CoursesPage({ enrolled, setEnrolled }) {
   const [courses, setCourses] = useState([]);
   const [enrolled, setEnrolled] = useState([]);
 
