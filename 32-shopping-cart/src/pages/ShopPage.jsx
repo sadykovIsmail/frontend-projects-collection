@@ -1,30 +1,22 @@
 // pages/ShopPage.jsx
 import { useEffect, useState } from "react";
+import ProductCard from "../components/ProductCard";
 
-export default function ShopPage() {
+export default function ShopPage({ addToCart }) {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
     fetch("https://fakestoreapi.com/products")
       .then(res => res.json())
-      .then(data => setProducts(data))
-      .catch(error => console.error("Fetch error:", error));
+      .then(data => setProducts(data));
   }, []);
 
   return (
     <div>
       <h1>Shop</h1>
-      {products.length === 0 ? (
-        <p>Loading...</p>
-      ) : (
-        products.map(product => (
-          <div key={product.id}>
-            <h3>{product.title}</h3>
-            <img src={product.image} alt={product.title} width="100" />
-            <p>${product.price}</p>
-          </div>
-        ))
-      )}
+      {products.map(product => (
+        <ProductCard key={product.id} product={product} addToCart={addToCart} />
+      ))}
     </div>
   );
 }
