@@ -13,7 +13,7 @@ export default function App () {
 <Routes>
   <Route path="/" element={<HomePage added={added} setAdded={setAdded}/>}/>
   <Route path="/movie/:id" element={<MovieDetails />}/>
-  <Route path="/favourite" element={<FavouritePage />}/>
+  <Route path="/favourite" element={<FavouritePage added={added} />}/>
 </Routes>
 
 </BrowserRouter>

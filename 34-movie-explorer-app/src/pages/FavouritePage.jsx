@@ -7,12 +7,13 @@ return(
     ) : (
 added.map(movie => (
 <>
+<h2>{movie.title}</h2>
 <img
-                  src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`}
-                  alt={movie.title}
-                  style={{ width: "100%" }}
+                src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`}
+                alt={movie.title}
+                
                 />
-                <h3>{movie.title}</h3>
+                
                 </>
 ))
     )}
