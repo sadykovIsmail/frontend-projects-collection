@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
-export default function HomePage() {
+export default function HomePage({added, setAdded}) {
   const [movies, setMovies] = useState([]);
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
@@ -20,6 +20,12 @@ export default function HomePage() {
       });
   }, []);
 
+  const handleAdd = (movie) => {
+    if(!added.find(c => c.id === movie.id)){
+        setAdded([...added, movie])
+    }
+  }
+
   if (loading) return <p>Loading...</p>;
 
   return (
@@ -31,7 +37,8 @@ export default function HomePage() {
         <div style={{ display: "flex", flexWrap: "wrap", gap: "20px" }}>
           {movies.map((movie) => (
             movie.poster_path && (
-              <div
+                <div>
+                     <div
                 key={movie.id}
                 onClick={() => navigate(`/movie/${movie.id}`)}
                 style={{ cursor: "pointer", width: "200px" }}
@@ -43,6 +50,11 @@ export default function HomePage() {
                 />
                 <h3>{movie.title}</h3>
               </div>
+                              <button onClick={() => handleAdd(movie)}>{added.find(c => c.id === movie.id)? "Added to favourite" : "Add to favourite"}</button>
+
+                     </div>
+             
+              
             )
           ))}
         </div>
