@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
-export default function HomePage({added, setAdded}) {
-  const [movies, setMovies] = useState([]);
+export default function HomePage({added, setAdded, movies, setMovies}) {
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
 
@@ -38,7 +37,7 @@ export default function HomePage({added, setAdded}) {
           {movies.map((movie) => (
             movie.poster_path && (
                 <div>
-                     <div
+                    <div
                 key={movie.id}
                 onClick={() => navigate(`/movie/${movie.id}`)}
                 style={{ cursor: "pointer", width: "200px" }}
