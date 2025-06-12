@@ -2,13 +2,16 @@ import { useState } from "react";
 
 export default function SearchPage({ movies }) {
   const [searched, setSearched] = useState("");
-  const [searchedMovies, setSearchedMovies] = useState([]);
+  const [searchedMovies, setSearchedMovies] = useState(movies);
 
   const handleChange = (e) => {
     const input = e.target.value;
     setSearched(input);
 
-    const filtered = movies.filter((movie) =>
+    const filtered =
+    input.trim() === "" 
+    ? movies
+    : movies.filter((movie) =>
       movie.title.toLowerCase().startsWith(input.toLowerCase())
     );
     setSearchedMovies(filtered);
