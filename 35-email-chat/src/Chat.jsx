@@ -1,14 +1,14 @@
-import { useState } from "react";
+import { useState } from 'react';
 
-export default function Chat({ contact, message, dispatch }) {
+export default function Chat({contact, message, dispatch}) {
   return (
     <section className="chat">
       <textarea
         value={message}
-        placeholder={"Chat to " + contact.name}
+        placeholder={'Chat to ' + contact.name}
         onChange={(e) => {
           dispatch({
-            type: "edited_message",
+            type: 'edited_message',
             message: e.target.value,
           });
         }}
@@ -16,13 +16,11 @@ export default function Chat({ contact, message, dispatch }) {
       <br />
       <button
         onClick={() => {
-          alert(`Email: ${contact.email} \nMessage: ${message}`);
+          alert(`Sending "${message}" to ${contact.email}`);
           dispatch({
-            type: "edited_message",
-            message: "", // Clear the message input
+            type: 'sent_message',
           });
-        }}
-      >
+        }}>
         Send to {contact.email}
       </button>
     </section>
