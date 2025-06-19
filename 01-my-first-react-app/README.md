@@ -16,7 +16,7 @@ A simple "Hello World" project built using HTML, CSS, and JavaScript to demonstr
 - Basic layout and styling
 
 ## 📸 Screenshots
-
+![Screenshot of the RPG Creature App](./screenshot.png)
 
 ## 📦 Getting Started
 
