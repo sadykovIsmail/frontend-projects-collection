@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-    "homepage": "https://sadykovIsmail.github.io/frontend-projects-collection/03-reusable-profile-card/",
+  "homepage": "https://sadykovIsmail.github.io/frontend-projects-collection/03-reusable-profile-card/",
 
   "scripts": {
     "dev": "vite",
