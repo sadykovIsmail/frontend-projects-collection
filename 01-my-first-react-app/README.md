@@ -3,7 +3,7 @@
 A simple "Hello World" project built using HTML, CSS, and JavaScript to demonstrate the structure of a basic frontend web app.
 
 ## 🔗 Live Demo
-[View Live](https://sadykovismail.github.io/frontend-projects-collection/01-my-first-react-app)
+[View Live](https://sadykovIsmail.github.io/frontend-projects-collection/01-my-first-react-app)
 
 ## 🛠️ Built With
 - HTML5
