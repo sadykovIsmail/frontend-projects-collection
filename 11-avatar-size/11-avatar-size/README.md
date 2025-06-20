@@ -1,12 +1,32 @@
-# React + Vite
+# 👤 Avatar Size Variants
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A reusable React component that displays user avatars in multiple predefined sizes. Built with Vite for fast development and deployed using GitHub Pages.
 
-Currently, two official plugins are available:
+## 🔗 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[View Live](https://sadykovIsmail.github.io/frontend-projects-collection/11-avatar-size/)
 
-## Expanding the ESLint configuration
+## 🛠️ Built With
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- [React](https://reactjs.org/)
+- [Vite](https://vitejs.dev/)
+- HTML5 + CSS3
+
+## ✨ Features
+
+- Different avatar sizes (small, medium, large)
+- Easy to reuse in other React apps
+- Fully responsive design
+- Clean component-based structure
+
+## 📸 Screenshots
+
+![Avatar Size Screenshot](./screenshot.png)
+
+## 📦 Getting Started
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/sadykovIsmail/frontend-projects-collection.git
+cd frontend-projects-collection/11-avatar-size
