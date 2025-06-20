@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { sculptureList } from './data.js';
 
-export default function Gallery() {
+export default function App() {
   const [index, setIndex] = useState(0);
   const [showMore, setShowMore] = useState(false);
   const [previous, setPrevious] = useState(0);
