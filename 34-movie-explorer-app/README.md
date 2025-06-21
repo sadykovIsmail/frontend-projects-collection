@@ -1,12 +1,45 @@
-# React + Vite
+# 🎬 Movie Explorer App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A sleek and responsive movie explorer application built with React and Vite. Users can browse a list of movies and search by title in real-time using a simple, intuitive interface.
 
-Currently, two official plugins are available:
+## 🔗 Live Demo  
+[View Live](https://sadykovismail.github.io/frontend-projects-collection/34-movie-explorer-app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠️ Built With  
+- React  
+- JavaScript (ES6+)  
+- Vite  
+- CSS3
 
-## Expanding the ESLint configuration
+## ✨ Features  
+- Live movie search  
+- Responsive layout  
+- Clean and minimal UI  
+- Fast loading with Vite
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📸 Screenshot
+![Resume Generator Screenshot](./screenshot.png)
+
+
+## 📦 Getting Started  
+
+To run this project locally:  
+```bash
+# Clone the repository  
+git clone https://github.com/sadykovIsmail/frontend-projects-collection.git
+
+# Navigate to the project folder  
+cd frontend-projects-collection/34-movie-explorer-app
+
+# Install dependencies  
+npm install
+
+# Run development server  
+npm run dev
+
+# Build for production  
+npm run build
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
