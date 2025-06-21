@@ -1,4 +1,4 @@
-# 📝 Resume Generator
+# 📝 Event Registration App
 
 A simple and interactive resume (CV) generator built with React. Users can input their personal information, education, and work experience to generate a resume preview in real-time.
 
