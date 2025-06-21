@@ -3,6 +3,9 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+      "homepage": "https://sadykovismail.github.io/frontend-projects-collection/33-online-courses",
+
+
   "scripts": {
     "dev": "vite",
     "build": "vite build",
