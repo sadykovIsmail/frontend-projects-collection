@@ -1,6 +1,6 @@
 // src/hooks/useFetchCards.js
 import React, { useState, useEffect } from 'react';
-import { shuffleArray } from '../utils/shuffleArray';
+import { shuffleArray } from '../utils/shuffleArray.jsx';
 
 export default function useFetchCards() {
   const [cards, setCards]     = useState([]);
