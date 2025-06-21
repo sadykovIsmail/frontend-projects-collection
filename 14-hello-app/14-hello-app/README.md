@@ -1,12 +1,33 @@
-# React + Vite
+# 👋 Hello App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple React application that renders a greeting message. This project demonstrates the basics of React components and JSX, built with Vite and deployed on GitHub Pages.
 
-Currently, two official plugins are available:
+## 🔗 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[View Live](https://sadykovIsmail.github.io/frontend-projects-collection/14-hello-app/)
 
-## Expanding the ESLint configuration
+## 🛠️ Built With
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- [React](https://reactjs.org/)
+- [Vite](https://vitejs.dev/)
+- HTML5
+- CSS3
+
+## ✨ Features
+
+- Displays a "Hello" message
+- Clean and minimal layout
+- Very beginner-friendly structure
+- Fast builds with Vite
+
+## 📸 Screenshots
+
+![Hello App Screenshot](./screenshot.png)
+
+## 📦 Getting Started
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/sadykovIsmail/frontend-projects-collection.git
+cd frontend-projects-collection/14-hello-app
