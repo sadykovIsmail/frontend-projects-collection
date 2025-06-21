@@ -6,7 +6,7 @@ const initialItems = [
   { title: 'granola bar', id: 2 },
 ];
 
-export default function Menu() {
+export default function App() {
   const [items, setItems] = useState(initialItems);
   const [selectedId, setSelectedId] = useState(0);
 
