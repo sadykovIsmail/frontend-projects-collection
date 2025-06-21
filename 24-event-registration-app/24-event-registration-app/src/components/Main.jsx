@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import AttendeeInfo from "./AttendeeInfo";
-import ChooseTickets from "./ChooseTickets";
-import AdditionalDetails from "./AdditionalDetails";
+import AttendeeInfo from "./AttendeeInfo.jsx";
+import ChooseTickets from "./ChooseTickets.jsx";
+import AdditionalDetails from "./AdditionalDetails.jsx";
 import '../styles/Main.css'
 
 export default function Main () {

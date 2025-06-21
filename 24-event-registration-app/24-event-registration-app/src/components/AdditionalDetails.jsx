@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import InputFields from "./InputFields";
-import SectionControls from "./SectionControls";
+import InputFields from "./InputFields.jsx";
+import SectionControls from "./SectionControls.jsx";
 import '../styles/AdditionalDetails.css'
 
 export default function AdditionalDetails ({

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import SectionControls from "./SectionControls";
-import InputFields from "./InputFields";
+import SectionControls from "./SectionControls.jsx";
+import InputFields from "./InputFields.jsx";
 import "../styles/ChooseTicket.css"
 
 export default function ChooseTickets ({
