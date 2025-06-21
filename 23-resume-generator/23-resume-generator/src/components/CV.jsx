@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import GeneralInfo from './GeneralInfo';
-import Education from './Education';
-import Experience from './Experience';
+import GeneralInfo from './GeneralInfo.jsx';
+import Education from './Education.jsx';
+import Experience from './Experience.jsx';
 import '../styles/CV.css';
 
 export default function CV() {

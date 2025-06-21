@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import InputField from './InputField';
-import SectionControls from './SectionControls';
+import InputField from './InputField.jsx';
+import SectionControls from './SectionControls.jsx';
 import '../styles/Experience.css';
 
 export default function Experience({ data, onSubmit }) {
