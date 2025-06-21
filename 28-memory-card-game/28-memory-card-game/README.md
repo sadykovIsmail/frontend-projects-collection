@@ -1,12 +1,54 @@
-# React + Vite
+# 📝 Resume Generator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple and interactive resume (CV) generator built with React. Users can input their personal information, education, and work experience to generate a resume preview in real-time.
 
-Currently, two official plugins are available:
+## 🔗 Live Demo  
+[View Live](https://sadykovismail.github.io/frontend-projects-collection/28-memory-card-game/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠️ Built With
+- React
+- Vite
+- HTML5
+- CSS3
 
-## Expanding the ESLint configuration
+## ✨ Features
+- Flip cards to find matching pairs
+- Tracks number of turns
+- Game resets when completed
+- Simple responsive design
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📸 Screenshot
+![Resume Generator Screenshot](./screenshot.png)
+
+## 📦 Getting Started
+
+### 1. Clone the Repository
+```bash
+git clone https://github.com/sadykovIsmail/frontend-projects-collection.git
+cd frontend-projects-collection/23-resume-generator/23-resume-generator
+```
+
+### 2. Install Dependencies
+```bash
+npm install
+```
+
+### 3. Run the App
+```bash
+npm run dev
+```
+
+### 4. Build for Production
+```bash
+npm run build
+```
+
+### 5. Deploy to GitHub Pages
+```bash
+xcopy dist ..\..\docs\23-resume-generator\ /E /I /Y
+```
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
+

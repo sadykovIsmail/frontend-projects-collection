@@ -3,7 +3,7 @@
 A simple and interactive resume (CV) generator built with React. Users can input their personal information, education, and work experience to generate a resume preview in real-time.
 
 ## 🔗 Live Demo  
-[View Live](https://sadykovismail.github.io/frontend-projects-collection/23-resume-generator/)
+[View Live](https://sadykovismail.github.io/frontend-projects-collection/24-event-registration-app/)
 
 ## 🛠️ Built With
 - React
@@ -45,19 +45,6 @@ npm run build
 ### 5. Deploy to GitHub Pages
 ```bash
 xcopy dist ..\..\docs\23-resume-generator\ /E /I /Y
-```
-
-## 📁 Folder Structure
-```
-23-resume-generator/
-  ├── src/
-  │   ├── components/
-  │   │   ├── CV.jsx
-  │   │   ├── GeneralInfo.jsx
-  │   │   └── ...
-  ├── public/
-  ├── index.html
-  ├── vite.config.js
 ```
 
 ## License
