@@ -1,6 +1,6 @@
 # ⚛️ React Frontend Projects Collection
 
-A curated collection of mini React.js projects created while learning and practicing frontend libraries through freeCodeCamp. These projects explore various React concepts including state management, props, event handling, conditional rendering, component design, and more.
+A curated collection of mini React.js projects I created while learning and practicing frontend libraries through freeCodeCamp, The Odin Project, and guidance from ChatGPT. These projects explore a wide range of React fundamentals including state, props, effects, component design, event handling, and deployment practices.
 
 > 📁 Each project lives in its own folder with production build output under `docs/` for GitHub Pages deployment.
 
@@ -73,7 +73,7 @@ A curated collection of mini React.js projects created while learning and practi
   🔗 [GitHub](https://github.com/sadykovIsmail/frontend-projects-collection/tree/main/34-movie-explorer-app)  
   🔗 [Live Demo](https://sadykovismail.github.io/frontend-projects-collection/34-movie-explorer-app/)
 
-  - **Shopping Cart App**  
+- **Shopping Cart App**  
   🔗 [GitHub](https://github.com/sadykovIsmail/frontend-projects-collection/tree/main/32-shopping-cart)  
   🔗 [Live Demo](https://sadykovismail.github.io/frontend-projects-collection/32-shopping-cart/)
 
