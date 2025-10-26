@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
-export default function HomePage({added, setAdded, movies, setMovies}) {
+export default function HomePage({ added, setAdded, movies, setMovies, user }) {
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
 
@@ -18,23 +18,34 @@ export default function HomePage({added, setAdded, movies, setMovies}) {
       });
   }, [setMovies]);
 
-  const handleAdd = (movie) => {
-    if(!added.find(c => c.id === movie.id)){
-      setAdded([...added, movie])
+  const handleToggleFavourite = (movie) => {
+    if (!user) {
+      navigate('/login');
+      return;
     }
-  }
 
-  const handleRemove = (movieId) => {
-    setAdded(added.filter(m => m.id !== movieId));
-  }
+    if (added.find(c => c.id === movie.id)) {
+      setAdded(added.filter(m => m.id !== movie.id));
+    } else {
+      setAdded([...added, movie]);
+    }
+  };
 
-  if (loading) return <div className="loading">Loading trending movies...</div>;
+  if (loading) {
+    return <div className="loading">🎬 Loading trending movies...</div>;
+  }
 
   return (
     <div className="page-container">
-      <h1>Trending Movies This Week</h1>
+      <div className="page-header">
+        <h1>🔥 Trending This Week</h1>
+        <p className="page-subtitle">Discover the hottest movies everyone's watching</p>
+      </div>
+      
       {movies.length === 0 ? (
-        <div className="empty-state">No movies found.</div>
+        <div className="empty-state">
+          <p>No movies found.</p>
+        </div>
       ) : (
         <div className="movie-grid">
           {movies.map((movie) => (
@@ -48,25 +59,28 @@ export default function HomePage({added, setAdded, movies, setMovies}) {
                     src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
                     alt={movie.title}
                   />
+                  <div className="movie-overlay">
+                    <span className="view-details">View Details</span>
+                  </div>
                 </div>
                 <div className="movie-info">
                   <h3>{movie.title}</h3>
                   <div className="movie-rating">
                     <span>⭐</span>
                     {movie.vote_average?.toFixed(1) || 'N/A'}
+                    <span className="rating-count">({movie.vote_count})</span>
                   </div>
+                  <p className="movie-year">{movie.release_date?.split('-')[0] || 'N/A'}</p>
                 </div>
                 <button 
-                  onClick={() => {
-                    if(added.find(c => c.id === movie.id)) {
-                      handleRemove(movie.id);
-                    } else {
-                      handleAdd(movie);
-                    }
-                  }}
+                  onClick={() => handleToggleFavourite(movie)}
                   className={`btn-favourite ${added.find(c => c.id === movie.id) ? 'added' : ''}`}
                 >
-                  {added.find(c => c.id === movie.id) ? '✓ In Favourites' : '+ Add to Favourites'}
+                  {added.find(c => c.id === movie.id) ? (
+                    <>❤️ Remove from Favourites</>
+                  ) : (
+                    <>🤍 Add to Favourites</>
+                  )}
                 </button>
               </div>
             )
